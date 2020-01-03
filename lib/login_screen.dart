@@ -99,61 +99,67 @@ class _LoginScreenState extends State<LoginScreen> with ValidationMixins {
   Widget build(BuildContext context) {
     MediaQueryData queryData;
     queryData = MediaQuery.of(context);
-    return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: Text(
-          'Disqus System',
+    return WillPopScope(
+      onWillPop: () {
+        CustomAlertDialogs.exitDialog(context);
+        return null;
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          title: Text(
+            'Disqus System',
+          ),
+          centerTitle: true,
         ),
-        centerTitle: true,
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(10.0),
-          child: GestureDetector(
-            onTap: () {
-              FocusScope.of(context).requestFocus(new FocusNode());
-            },
-            child: Form(
-              key: loginFormKey,
-              autovalidate: autoCorrectCheck,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  Image.asset(
-                    'assets/images/ds-logo.png',
-                    height: 250.0,
-                    width: 250.0,
-                  ),
-                  emailAddressField(),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  passwordField(),
-                  Padding(
-                    padding: EdgeInsets.all(10.0),
-                  ),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(40, 0, 40, 0),
-                    child: RaisedButton(
-                      onPressed: loginUser,
-                      padding: EdgeInsets.all(
-                        (queryData.size.height / 70.0),
-                      ),
-                      color: Theme.of(context).primaryColor,
-                      child: Text(
-                        "LOGIN",
-                        style: TextStyle(
-                            fontSize: 16.0,
-                            fontFamily: 'roboto',
-                            color: Colors.white),
+        body: SingleChildScrollView(
+          child: Container(
+            padding: EdgeInsets.all(10.0),
+            child: GestureDetector(
+              onTap: () {
+                FocusScope.of(context).requestFocus(new FocusNode());
+              },
+              child: Form(
+                key: loginFormKey,
+                autovalidate: autoCorrectCheck,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    Image.asset(
+                      'assets/images/ds-logo.png',
+                      height: 250.0,
+                      width: 250.0,
+                    ),
+                    emailAddressField(),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    passwordField(),
+                    Padding(
+                      padding: EdgeInsets.all(10.0),
+                    ),
+                    Container(
+                      padding: EdgeInsets.fromLTRB(40, 0, 40, 0),
+                      child: RaisedButton(
+                        onPressed: loginUser,
+                        padding: EdgeInsets.all(
+                          (queryData.size.height / 70.0),
+                        ),
+                        color: Theme.of(context).primaryColor,
+                        child: Text(
+                          "LOGIN",
+                          style: TextStyle(
+                              fontSize: 16.0,
+                              fontFamily: 'roboto',
+                              color: Colors.white),
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),

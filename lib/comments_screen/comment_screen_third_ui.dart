@@ -25,7 +25,7 @@ class CommentScreenThirdUI extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       Text(
-                        'Elliot Fu',
+                       'Joe Henderson',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20.0,
@@ -35,7 +35,7 @@ class CommentScreenThirdUI extends StatelessWidget {
                         width: 10.0,
                       ),
                       Text(
-                        'Yesterday at 12:30AM',
+                         '5 days ago',
                         style: TextStyle(
                           fontSize: 14.0,
                           color: Colors.grey,
@@ -51,7 +51,7 @@ class CommentScreenThirdUI extends StatelessWidget {
                       Container(
                         alignment: Alignment.bottomLeft,
                         child: Text(
-                          'How artistic!',
+                           'Dude, this is awesome.Thanks so much',
                           style: TextStyle(
                             fontSize: 17.0,
                             fontWeight: FontWeight.w700,

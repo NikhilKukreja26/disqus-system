@@ -47,7 +47,7 @@ class CommentScreenDividerUI extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   Text(
-                    'Elliot Fu',
+                   'Jenny Hess',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20.0,
@@ -57,7 +57,7 @@ class CommentScreenDividerUI extends StatelessWidget {
                     width: 10.0,
                   ),
                   Text(
-                    'Yesterday at 12:30AM',
+                    'Just now',
                     style: TextStyle(
                       fontSize: 14.0,
                       color: Colors.grey,
@@ -73,7 +73,7 @@ class CommentScreenDividerUI extends StatelessWidget {
                   Container(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      'How artistic!',
+                      'Elliot you are always so right :)',
                       style: TextStyle(
                         fontSize: 17.0,
                         fontWeight: FontWeight.w700,
