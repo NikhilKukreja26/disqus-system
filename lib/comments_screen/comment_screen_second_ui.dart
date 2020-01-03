@@ -1,3 +1,4 @@
+import 'package:disqus_system/constants.dart';
 import 'package:flutter/material.dart';
 
 class CommentScreenSecondUI extends StatelessWidget {
@@ -53,10 +54,7 @@ class CommentScreenSecondUI extends StatelessWidget {
                           alignment: Alignment.bottomLeft,
                           child: Text(
                             'This has been very useful for my research. Thanks as well!',
-                            style: TextStyle(
-                              fontSize: 17.0,
-                              fontWeight: FontWeight.w700,
-                            ),
+                            style: commentStyling,
                           ),
                         ),
                         SizedBox(

@@ -74,10 +74,7 @@ class CommentScreenDividerUI extends StatelessWidget {
                     alignment: Alignment.bottomLeft,
                     child: Text(
                       'Elliot you are always so right :)',
-                      style: TextStyle(
-                        fontSize: 17.0,
-                        fontWeight: FontWeight.w700,
-                      ),
+                      style: commentStyling,
                     ),
                   ),
                   SizedBox(

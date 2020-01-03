@@ -57,11 +57,7 @@ class CommentScreenFirstUI extends StatelessWidget {
                           alignment: Alignment.bottomLeft,
                           child: Text(
                             'How artistic!',
-                            style: TextStyle(
-                              fontSize: 17.0,
-                              color: blackColor,
-                              fontWeight: FontWeight.w600,
-                            ),
+                            style: commentStyling,
                           ),
                         ),
                         SizedBox(

@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 const blackColor = Colors.black;
 
-class Constants {
+const commentStyling = TextStyle(
+  fontSize: 17.0,
+  color: blackColor,
+  fontWeight: FontWeight.w600,
+);
 
-}
+class Constants {}
